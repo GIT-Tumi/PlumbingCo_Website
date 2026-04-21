@@ -37,7 +37,43 @@
             <li>Pricing</li>
           </ul>
         </li>
+        <li>Emergency Enquiries
+          <ul>
+            <li>Emergency Services</li>
+            <li>Scheduling</li>
+          </ul>
+        </li>
       </ul>
+    </Section>
+
+    <Section id="form">
+      <h3>Enquiry Form</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+         <br/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+          <br/>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+          <br/>
+        <label for="service">Service Type:</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="leak-repair">Leak Repairs</option>
+          <option value="pipe-installation">Pipe Installation</option>
+          <option value="drain-cleaning">Drain Cleaning</option>
+          <option value="drain-installation">Drain Installation</option>
+          <option value="emergency">Emergency Services</option>
+          <option value="other">Other</option>
+        </select>
+          <br/>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Submit Enquiry</button>
+      </form>
     </Section>
     
   </main>
