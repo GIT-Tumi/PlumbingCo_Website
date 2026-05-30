@@ -65,13 +65,16 @@ nav a:focus {
 }
 
 main {
+  width: min(100%, 1000px);
   max-width: 1000px;
+  min-height: 460px;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 238, 255, 0.774);
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 #index, #index {
@@ -110,6 +113,18 @@ footer img { max-width: 50px; height: auto; }
 
 .footer-top ul li {
   margin: 0;
+  padding: 0 12px;
+  position: relative;
+}
+
+.footer-top ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .footer-top a {
