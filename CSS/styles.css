@@ -79,7 +79,12 @@ nav a {
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.25s ease;
 }
 
-nav a:hover,
+nav a:hover  {
+  background-color: var(--hover-bg);
+  color: var(--surface-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.16);
+}
 nav a:focus {
   background-color: var(--hover-bg);
   color: var(--surface-strong);
