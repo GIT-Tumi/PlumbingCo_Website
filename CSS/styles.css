@@ -208,4 +208,145 @@ button, input, select, textarea { font-family: inherit;
   transition: border-color 0.25s ease, box-shadow 0.2s ease;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding-left: 20px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+
+  header img {
+    position: static;
+    width: 70px !important;
+    height: 70px !important;
+    margin: 0 auto 12px;
+    transform: none;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    margin: 8px 0;
+  }
+
+  nav ul {
+    gap: 8px;
+    margin: 8px auto 0;
+  }
+
+  nav a {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    width: 95%;
+    max-width: 100%;
+    min-height: auto;
+    margin: 12px auto;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  #contact {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #contact img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer-top img {
+    position: static;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0;
+    transform: none;
+  }
+
+  .footer-top ul {
+    gap: 8px;
+  }
+
+  .footer-top ul li {
+    padding: 0 8px;
+  }
+
+  .footer-top ul li:not(:last-child)::after {
+    display: none;
+  }
+
+  .footer-columns {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .footer-columns p {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 16px 12px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (under 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  main {
+    width: 100%;
+    margin: 8px auto;
+    padding: 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  #contact img {
+    width: 100%;
+    height: auto;
+  }
+
+  button, input, select, textarea {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
 
