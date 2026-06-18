@@ -208,6 +208,68 @@ button, input, select, textarea { font-family: inherit;
   transition: border-color 0.25s ease, box-shadow 0.2s ease;
 }
 
+button {
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+button:hover, .copy-contact-button:hover {
+  background: var(--primary-soft);
+}
+
+nav a.active {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--surface-strong);
+}
+
+#services h3.clickable-heading {
+  cursor: pointer;
+  position: relative;
+}
+
+#services h3.clickable-heading::after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  transition: transform 0.25s ease;
+}
+
+#services h3.clickable-heading.expanded::after {
+  transform: rotate(-180deg);
+}
+
+#services ul.collapsed {
+  display: none;
+}
+
+.form-feedback,
+.inline-message {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: none;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+  z-index: 1000;
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   header {
