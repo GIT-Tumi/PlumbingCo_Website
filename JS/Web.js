@@ -18,4 +18,29 @@ function highlightCurrentNavLink() {
   });
 }
 
+function setupServiceToggles() {
+  const serviceHeadings = document.querySelectorAll('#services h3');
+  serviceHeadings.forEach(heading => {
+    heading.classList.add('clickable-heading');
+    heading.addEventListener('click', () => {
+      const next = heading.nextElementSibling;
+      if (next && next.tagName.toLowerCase() === 'ul') {
+        next.classList.toggle('collapsed');
+        heading.classList.toggle('expanded');
+      }
+    });
+  });
+}
+
+function setupEnquiryForm() {
+  const form = document.querySelector('form');
+  if (!form) return;
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
