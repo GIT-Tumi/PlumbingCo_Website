@@ -1,15 +1,26 @@
+// Run initialization when the HTML document has been fully loaded.
+// This keeps markup and behavior separate and prevents queries on missing nodes.
 document.addEventListener('DOMContentLoaded', () => {
+  // Highlight the current navigation link based on the URL
   highlightCurrentNavLink();
+
+  // Make the Services section headings toggle their following lists
   setupServiceToggles();
+
+  // Enable enhanced behaviour for the enquiries form (validation, feedback)
   setupEnquiryForm();
+
+  // Add a small utility button that copies contact details to the clipboard
   setupContactCopyButton();
+
+  // Add a floating Back-to-Top button for improved navigation on long pages
   addBackToTopButton();
 });
 
 function highlightCurrentNavLink() {
   const links = document.querySelectorAll('nav a');
   const locationFile = window.location.pathname.split('/').pop();
-
+  // Compare each link's href to the current filename (treat root as index.html)
   links.forEach(link => {
     const href = link.getAttribute('href');
     if (href === locationFile || (href === 'index.html' && locationFile === '')) {
@@ -21,6 +32,8 @@ function highlightCurrentNavLink() {
 function setupServiceToggles() {
   const serviceHeadings = document.querySelectorAll('#services h3');
   serviceHeadings.forEach(heading => {
+    // Add an affordance class and toggle the next <ul> on click. This
+    // creates a simple accessible accordion-like behavior for services.
     heading.classList.add('clickable-heading');
     heading.addEventListener('click', () => {
       const next = heading.nextElementSibling;
@@ -58,13 +71,16 @@ function setupEnquiryForm() {
   const formFields = [...form.querySelectorAll('input, select, textarea')];
 
   function updateSubmitState() {
+    // Enable the submit button only when the native HTML validation passes
     submitButton.disabled = !form.checkValidity();
+    // Clear any status message once the form becomes valid
     if (statusMessage.textContent && form.checkValidity()) {
       statusMessage.textContent = '';
     }
   }
 
   function validateField(field) {
+    // Apply a visual error class when the field is invalid.
     if (field.checkValidity()) {
       field.classList.remove('field-error');
       return true;
@@ -106,20 +122,24 @@ function setupEnquiryForm() {
 
     if (!form.checkValidity()) {
       updateFieldErrors();
+      // Inform the user about missing/invalid fields; the browser will
+      // also show individual validation hints if supported.
       statusMessage.textContent = 'Please complete all required fields before submitting your enquiry.';
       return;
     }
 
     const name = form.querySelector('#name').value.trim();
     const serviceType = serviceSelect.options[serviceSelect.selectedIndex].text;
-
+    // Show a simple client-side confirmation message. (No network call.)
     statusMessage.textContent = `Thank you, ${name || 'customer'}! Your enquiry about ${serviceType} has been received.`;
     statusMessage.classList.add('form-feedback');
+    // Temporarily disable the submit button while showing the message
     submitButton.disabled = true;
     form.reset();
     toggleExtraServiceDetails();
     formFields.forEach(field => field.classList.remove('field-error'));
 
+    // Clear the success message after a short delay and re-enable submit
     setTimeout(() => {
       statusMessage.textContent = '';
       statusMessage.classList.remove('form-feedback');
@@ -149,8 +169,10 @@ function setupContactCopyButton() {
 
     try {
       await navigator.clipboard.writeText(contactText);
+      // Notify the user that the clipboard write succeeded
       showInlineMessage(contactSection, 'Contact details copied to clipboard!');
     } catch (error) {
+      // If clipboard API fails (e.g., unsupported), provide a fallback message
       showInlineMessage(contactSection, 'Unable to copy automatically. Please select and copy manually.');
     }
   });
