@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enquiries - Pty PlumbingCo</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Pty PlumbingCo</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  
 </head>
 <body>
   <header>
-    <img src="Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
+    <img src="../Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
     <h1>Pty PlumbingCo</h1>
     <nav>
       <ul>
@@ -21,49 +22,66 @@
     </nav>
   </header>
   <main>
-    <section id="enquiries">
-      <h2>Enquiry Form</h2>
-      <p>Have a question or need a quote? Fill out the form below and we'll get back to you soon.</p>
-      
+    
+    <Section id="enquiries">
+      <h2>Enquiries</h2>
+      <ul>
+        <li>General Enquiries
+          <ul>
+            <li>Contact Information</li>
+            <li>Business Hours</li>
+          </ul>
+        </li>
+        <li>Service Enquiries
+          <ul>
+            <li>Available Services</li>
+            <li>Pricing</li>
+          </ul>
+        </li>
+        <li>Emergency Enquiries
+          <ul>
+            <li>Emergency Services</li>
+            <li>Scheduling</li>
+          </ul>
+        </li>
+      </ul>
+    </Section>
+
+    <Section id="form">
+      <h3>Enquiry Form</h3>
       <form>
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-
-        <div>
-          <label for="service">Service Type:</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option value="residential">Residential Plumbing</option>
-            <option value="commercial">Commercial Plumbing</option>
-            <option value="emergency">Emergency Services</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+         <br/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+          <br/>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+          <br/>
+        <label for="service">Service Type:</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="leak-repair">Leak Repairs</option>
+          <option value="pipe-installation">Pipe Installation</option>
+          <option value="drain-cleaning">Drain Cleaning</option>
+          <option value="drain-installation">Drain Installation</option>
+          <option value="emergency">Emergency Services</option>
+          <option value="other">Other</option>
+        </select>
+          <br/>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <br/>
         <button type="submit">Submit Enquiry</button>
       </form>
-    </section>
+    </Section>
+    
   </main>
   <footer>
     <div class="footer-top">
-      <img src="Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
+      <img src="../Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
+
       <ul>
           <li><a href="about_us.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -83,8 +101,9 @@
       <p>253 Plumbing St, Polokwane Central, 0700</p>
     </div>
     <hr class="footer-separator">
-    <p>&copy; 2015-2026 Pty PlumbingCo. All rights reserved.</p>
+    <p>&copy; 2023-2026 Pty PlumbingCo. All rights reserved.</p>
   </footer>
-  <script src="JS/Web.js"></script>
+  <script src="../JS/Web.js"></script>
 </body>
 </html>
+
