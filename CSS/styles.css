@@ -208,6 +208,36 @@ button, input, select, textarea { font-family: inherit;
   transition: border-color 0.25s ease, box-shadow 0.2s ease;
 }
 
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.field-error {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.form-status {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.form-feedback {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+}
+
 button {
   background: var(--primary);
   color: #fff;
