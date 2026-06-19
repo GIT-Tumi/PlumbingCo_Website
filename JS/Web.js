@@ -12,7 +12,7 @@ function highlightCurrentNavLink() {
 
   links.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === locationFile || (href === 'Home.html' && locationFile === '')) {
+    if (href === locationFile || (href === 'index.html' && locationFile === '')) {
       link.classList.add('active');
     }
   });

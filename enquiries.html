@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiries - Pty PlumbingCo</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <header>
+    <img src="Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
+    <h1>Pty PlumbingCo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiries.html">Enquiries</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="enquiries">
+      <h2>Enquiry Form</h2>
+      <p>Have a question or need a quote? Fill out the form below and we'll get back to you soon.</p>
+      
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div>
+          <label for="service">Service Type:</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="residential">Residential Plumbing</option>
+            <option value="commercial">Commercial Plumbing</option>
+            <option value="emergency">Emergency Services</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-top">
+      <img src="Images/PtyPlumbingCo_Logo.png" alt="Pty PlumbingCo Logo" width="100" height="100">
+      <ul>
+          <li><a href="about_us.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+    <hr class="footer-separator">
+    <div class="footer-columns">
+      <p>Text or Call us!<br/>(015) 456-7890</p>
+      <br/>
+      <p>Operating Hours</p>
+      <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+      <p>Saturday: 9:00 AM - 4:00 PM</p>
+      <p>Sunday: Closed</p>
+      <br/>
+      <p>Address of Company</p>
+      <p>253 Plumbing St, Polokwane Central, 0700</p>
+    </div>
+    <hr class="footer-separator">
+    <p>&copy; 2015-2026 Pty PlumbingCo. All rights reserved.</p>
+  </footer>
+  <script src="JS/Web.js"></script>
+</body>
+</html>
